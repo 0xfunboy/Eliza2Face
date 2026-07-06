@@ -1,0 +1,38 @@
+# Runtime/generated files
+*.log
+*.tmp
+*.wav
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.bmp
+*.gif
+__pycache__/
+*.pyc
+
+# Python envs and caches
+.venv/
+venv/
+.cache/
+hf-cache/
+
+# Secrets and machine-local tunnel credentials
+*.pem
+*.key
+*.crt
+*.pfx
+*.json
+!package.json
+!package-lock.json
+.env
+.env.*
+secrets/
+cloudflared/
+cloudflared-imgchart/
+
+# Windows/service local state
+logs/
+edge-profile/
+wallboard.png
+transparent.png

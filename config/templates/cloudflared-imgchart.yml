@@ -1,0 +1,9 @@
+tunnel: <IMGCHART_TUNNEL_ID>
+credentials-file: C:\Eliza2Face\cloudflared-imgchart\imgchart.json
+
+ingress:
+  - hostname: ftp.example.com
+    service: http://localhost:8790
+  - hostname: imgchart.example.com
+    service: http://localhost:8790
+  - service: http_status:404

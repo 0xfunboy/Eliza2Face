@@ -1,0 +1,9 @@
+tunnel: <KOKORO_TUNNEL_ID>
+credentials-file: C:\Eliza2Face\cloudflared\kokoro.json
+
+ingress:
+  - hostname: tts.example.com
+    service: http://localhost:8790
+  - hostname: tts-api.example.com
+    service: http://localhost:8790
+  - service: http_status:404

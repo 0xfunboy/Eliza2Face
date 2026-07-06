@@ -1,0 +1,12 @@
+## requirements.txt
+
+torch
+kokoro
+misaki
+gradio
+soundfile
+numpy
+grpcio
+protobuf==3.20
+requests
+google

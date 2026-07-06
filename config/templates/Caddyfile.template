@@ -1,0 +1,33 @@
+{
+    admin off
+    auto_https off
+}
+
+http://tts.example.com:8790 {
+    basic_auth {
+        tts <BCRYPT_HASH_FOR_GUI_PASSWORD>
+    }
+    reverse_proxy 127.0.0.1:7870
+}
+
+http://tts-api.example.com:8790 {
+    route {
+        @badkey not header X-API-Key {env.KOKORO_API_KEY}
+        respond @badkey "Forbidden: missing or invalid X-API-Key" 403
+        basic_auth {
+            api <BCRYPT_HASH_FOR_API_PASSWORD>
+        }
+        reverse_proxy 127.0.0.1:7870
+    }
+}
+
+http://ftp.example.com:8790 {
+    basic_auth {
+        upload <BCRYPT_HASH_FOR_UPLOAD_PASSWORD>
+    }
+    reverse_proxy 127.0.0.1:8890
+}
+
+http://imgchart.example.com:8790 {
+    reverse_proxy 127.0.0.1:8890
+}
