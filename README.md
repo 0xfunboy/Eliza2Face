@@ -60,3 +60,7 @@ Secrets are intentionally not committed. Do not commit:
 - `docs/CLOUDFLARE.md`
 - `docs/SECURITY.md`
 - `docs/DEPLOYMENT.md`
+
+## Licensing
+
+Licensing scope and preserved third-party permissions are documented in [LICENSING.md](LICENSING.md). The [0xfunboy Non-Commercial License](LICENSE.md) covers eligible original material only.
